@@ -10,3 +10,29 @@ if (process.argv[2] % 2) {
 }
 
 // bonus2
+// const terminalString = process.argv[2]
+const terminaltestARr = process.argv.slice(2)
+const terminalString = terminaltestARr.join(" ")
+console.log(terminalString);
+
+const vocals = 'aeiou';
+let vocalCounter = 0;
+for (let i = 0; i < terminalString.length; i++) {
+    const curVocal = terminalString[i];
+    for (let j = 0; j < vocals.length; j++) {
+        const curChar = vocals[j];
+        if (curVocal === curChar) {
+            vocalCounter++;
+            console.log(vocals[j]);
+        }
+    }
+}
+console.log(`Vocali trovate: ${vocalCounter}`);
+// PAROLA PER IL TEST
+// supercalifragilistichespiralitoso
+// A 3
+// E 2
+// I 6
+// O 2
+// U 1
+// TOT 14
