@@ -17,17 +17,19 @@ console.log(terminalString);
 
 const vocals = 'aeiou';
 let vocalCounter = 0;
+const vocalsFindArr = [];
 for (let i = 0; i < terminalString.length; i++) {
     const curVocal = terminalString[i];
     for (let j = 0; j < vocals.length; j++) {
         const curChar = vocals[j];
         if (curVocal === curChar) {
             vocalCounter++;
-            console.log(vocals[j]);
+            vocalsFindArr.push(curVocal)
         }
     }
 }
-console.log(`Vocali trovate: ${vocalCounter}`);
+console.log(`Il counter delle vocali trovate è di: ${vocalCounter}`)
+console.log(`Le vocali trovate sono: ${vocalsFindArr.join(" ")}`);
 // PAROLA PER IL TEST
 // supercalifragilistichespiralitoso
 // A 3
